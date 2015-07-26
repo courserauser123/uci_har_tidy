@@ -54,3 +54,4 @@ subjectActivity <- data.frame(do.call(rbind, sapply(rownames(measurementAverages
 names(subjectActivity) <- c("subject", "activity")
 names(measurementAverages) <- gsub("\\.", "", names(measurementAverages))
 result <- cbind(subjectActivity, measurementAverages)
+write.table(result, "result.txt", row.names = FALSE)
